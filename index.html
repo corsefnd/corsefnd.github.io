@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性代数小班辅导疑难统计</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .note {
+            max-width: 500px;
+            margin: 40px auto 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .note p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>线性代数小班辅导疑难统计</h1>
+
+<form action="/submit" method="post">
+    <label>
+        姓名: <input type="text" name="name" placeholder="中文" required>
+    </label>
+    <br><br>
+    <label>
+        学号: <input type="text" name="student_id" placeholder="10位有效学号" required>
+    </label>
+    <br><br>
+    <label>
+        未解决的问题: <input type="text" name="questions" placeholder="全部用英文字符，用英文逗号隔开 如 1.1.1,1.2.1" required>
+    </label>
+    <br><br>
+    <input type="submit" value="提交">
+</form>
+
+<div class="note">
+    <p>注：</p>
+    <ol>
+        <li>同一个人重复提交的同个题号并不会被记录；</li>
+        <li>提交的题号必须和助教版本的线性代数PDF一致，<a href="/static/question.pdf" download>点此下载PDF</a>。</li>
+    </ol>
+</div>
+
+</body>
+</html>
